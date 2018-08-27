@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     MediaPlayer mediaPlayer;
     int count;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,43 +28,42 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e("count", "sound: "+count);
-                switch (count)
-                {
+                Log.e("count", "sound: " + count);
+                switch (count) {
                     case 0:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.one);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.one);
                         mediaPlayer.start();
                         break;
                     case 1:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.two);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.two);
                         mediaPlayer.start();
                         break;
                     case 2:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.three);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.three);
                         mediaPlayer.start();
                         break;
                     case 3:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.four);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.four);
                         mediaPlayer.start();
                         break;
                     case 4:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.five);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.five);
                         mediaPlayer.start();
                         break;
                     case 5:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.six);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.six);
                         mediaPlayer.start();
                         break;
                     case 6:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.seven);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.seven);
                         mediaPlayer.start();
                         break;
                     case 7:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.eight);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.eight);
                         mediaPlayer.start();
                         break;
                     case 8:
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.nine);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.nine);
                         mediaPlayer.start();
                         break;
 
@@ -73,13 +73,13 @@ public class MainActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (count<8) {
+                if (count < 8) {
                     switch (count) {
                         case 0:
                             textView.setText("Two");
                             image.setImageResource(R.drawable.two);
                             count++;
-                            Log.e("count", "next: "+count);
+                            Log.e("count", "next: " + count);
                             break;
                         case 1:
                             textView.setText("Three");
@@ -134,17 +134,15 @@ public class MainActivity extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               if (count>=0)
-               {
-                   count--;
-                   Log.e("count", "prev: "+count);
-               }
-                switch (count)
-                {
+                if (count >= 0) {
+                    count--;
+                    Log.e("count", "prev: " + count);
+                }
+                switch (count) {
                     case 0:
                         textView.setText("One");
                         image.setImageResource(R.drawable.a);
-                        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.one);
+                        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.one);
                         break;
                     case 1:
                         textView.setText("Two");
@@ -189,9 +187,8 @@ public class MainActivity extends AppCompatActivity {
         previous = findViewById(R.id.prev);
         image = findViewById(R.id.image);
         play = findViewById(R.id.sound_button);
-        count =0;
+        count = 0;
     }
-
 
 
 }
