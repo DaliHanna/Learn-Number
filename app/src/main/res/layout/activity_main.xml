@@ -30,7 +30,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:orientation="horizontal">
 
@@ -39,7 +40,8 @@
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/next" />
 
 
@@ -48,7 +50,8 @@
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/newnext" />
 
 
@@ -56,7 +59,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <Button
             android:id="@+id/sound_button"
 
